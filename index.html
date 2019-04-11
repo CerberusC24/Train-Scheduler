@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <title>Train Scheduler</title>
+</head>
+
+<body class="bg-dark">
+
+  
+    <header class="jumbotron jumbotron-fluid bg-primary text-light">
+      <h1 class="display-4 m-3">Train Scheduler</h1>
+      <p class="lead m-3">Clickety Clack, down the track. It's lots and lots of trains!</p>
+      <hr class="my-4">
+    </header>
+
+  <main class="container-fluid">
+    <div class="row">
+      <!-- left column -->
+      <aside class="col-12 col-md-3">
+        <div class="card sticky-top">
+          <h4 class="card-header bg-primary text-light text-center">
+            Look Up a Train
+          </h4>
+          <div class="card-body">
+            <!-- start form -->
+            <form id="employee-form">
+              <!-- train name -->
+              <div class="form-group">
+                <label for="train-input">Train Name</label>
+                <input class="form-control" type="text" id="train-input" placeholder="" />
+              </div>
+              <!-- Destinatuon -->
+              <div class="form-group">
+                <label for="destination-input">Destination</label>
+                <input class="form-control" type="text" id="destination-input" placeholder="" />
+              </div>
+              <!-- Frequency -->
+              <div class="form-group">
+                <label for="first-input">First Arrival</label>
+                <input class="form-control" type="text" id="first-input" placeholder="" />
+              </div>
+              <!-- Next Arrival -->
+              <div class="form-group">
+                <label for="frequency-input">Frequency</label>
+                <input class="form-control" type="number" id="frequency-input" placeholder="(min)" />
+              </div>
+              <!-- submit button -->
+              <button class="btn btn-block btn-primary" type="submit">Submit</button>
+            </form>
+            <!-- end form -->
+          </div>
+        </div>
+      </aside>
+      <!-- left column end -->
+
+      <!-- right column -->
+      <section class="col-12 col-md-9">
+        <!-- create card -->
+        <div class="card">
+          <h4 class="card-header bg-primary text-light text-center">
+            Current Schedule
+          </h4>
+          <div class="card-body">
+            <!-- employee data table -->
+            <table class="table">
+              <!-- define table headers -->
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">Train</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency (min)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- content will be written here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- right column end -->
+    </div>
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/javascript/trains.js"></script>
+</body>
+
+</html>
